@@ -1,0 +1,855 @@
+/* Theme CSS */
+
+body 
+{
+    background-color: @color-swatch1;
+    padding: 0;
+    margin: 0;
+}
+
+img
+{
+    margin:0 auto;
+}
+
+h1
+{
+    font-family:@font-swatch1-font-family;
+    font-size:@font-swatch1-font-size;
+    font-weight:@font-swatch1-font-weight;
+    line-height:@font-swatch1-line-height;
+    color:@font-swatch1-color;
+    letter-spacing: @font-swatch1-letter-spacing;
+}
+
+h2
+{
+    font-family:@font-swatch2-font-family;
+    font-size:@font-swatch2-font-size;
+    font-weight:@font-swatch2-font-weight;
+    line-height:@font-swatch2-line-height;
+    color:@font-swatch2-color;
+    letter-spacing: @font-swatch2-letter-spacing;
+}
+
+h3
+{
+    font-family:@font-swatch3-font-family;
+    font-size:@font-swatch3-font-size;
+    font-weight:@font-swatch3-font-weight;
+    line-height:@font-swatch3-line-height;
+    color:@font-swatch3-color;
+    letter-spacing: @font-swatch3-letter-spacing;
+}
+
+h4
+{
+    font-family:@font-swatch4-font-family;
+    font-size:@font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+p, ol, ul
+{
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight:@font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@font-swatch5-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+header,section,footer 
+{
+}
+
+header {
+}
+
+header .companyheader {
+    padding:20px 10px 0 10px;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+footer 
+{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: @color-swatch3;
+}
+
+footer p {
+     color: lighten(@color-swatch1,20%);
+}
+
+.widget 
+{
+    margin: 0;
+}
+
+
+
+
+/* Divider CSS */
+
+.widget.line {
+    padding: 20px 0;
+}
+
+hr.line {
+   background-color: @color-swatch3;
+   height: 3px;
+   width: 90%;
+   border: none;
+}
+
+hr.line.align-left {
+   margin: 20px auto 20px 0px;
+}
+
+hr.line.align-center {
+   margin: 20px auto;
+}
+
+hr.line.align-right {
+   margin: 20px 0px 20px auto;
+}
+
+
+/* Click To Call CSS */
+
+.widget.clicktocall {
+    background-color: @font-swatch7-background-color;
+    padding: 16px 10px;
+    margin: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.widget.clicktocall:hover {
+    background-color: darken(@color-swatch3,5%);
+    cursor: pointer;
+}
+
+.widget.clicktocall a {
+    font-family:@font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    color: @font-swatch7-color;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.widget.clicktocall a.justifyleft
+{
+    text-align: left;
+}
+
+.widget.clicktocall a.justifycenter
+{
+    text-align: center;
+}
+
+.widget.clicktocall a.justifyright
+{
+    text-align: right;
+}
+
+.widget.clicktocall a.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.clicktocall a.italic {
+    font-style: italic;
+}
+
+.widget.clicktocall a.bold {
+    font-weight: bold;
+}
+
+/* Button CSS */
+/* 
+    Document   : button
+    Created on : 04-Jul-2012, 14:15:32
+    Author     : Dom
+    Description: Button Wishful
+*/
+
+
+.widget.button button.btn {
+    width: 87.5%;
+    margin: 20px auto;
+    display: block;
+}
+
+.btnText {
+}
+
+.widget.button button
+{
+    font-family:@font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    color: @font-swatch7-color;
+    background-color: @font-swatch7-background-color;
+    padding: 16px 10px;
+    border: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.widget.button button:hover 
+{
+    cursor: pointer;
+    background-color: darken(@color-swatch3,5%);
+}
+
+.widget.button button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.button button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.button button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.button button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.button button.btn.italic {
+    font-style: italic;
+}
+
+.widget.button button.btn.bold {
+    font-weight: bold;
+}
+
+.widget.button span {
+    vertical-align: center;
+}
+
+.widget.button i {
+    margin-right: 5px;
+}
+
+
+/* Content CSS */
+/* 
+    Document   : image
+    Created on : 04-Jul-2012, 14:15:32
+    Author     : Dom
+    Description: Image Approcom
+*/
+
+
+.widget.content
+{
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.widget.content span.expand
+{
+    font-family: @font-swatch3-font-family;
+    background-color: @font-swatch7-background-color;
+    color: @font-swatch7-color;
+    font-size: @font-swatch5-font-size;
+    padding: 4px 8px;
+    margin: 4px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.widget.content span.expand:hover,
+.widget.content span.expand:focus
+{
+    cursor: pointer;
+    background-color: darken(@color-swatch3,5%);
+}
+
+/* Image CSS */
+/* 
+    Document   : image
+    Created on : 04-Jul-2012, 14:15:32
+    Author     : Dom
+    Description: Image Appproco 
+*/
+
+.widget.image img
+{
+    display:block;
+    margin:0 auto;
+}
+
+.widget.image {
+}
+
+.widget.image span.image-title {
+    display: block;
+    margin:5px;
+    font-family: @font-swatch4-font-family;
+    font-weight: @font-swatch4-font-weight;
+    font-size: @font-swatch4-font-size;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: @font-swatch4-line-height;
+}
+
+.widget.image span.image-description {
+    display: block;
+    margin:5px;
+    text-align: center;
+    font-family: @font-swatch5-font-family;
+    font-weight: @font-swatch5-font-weight;
+    font-size: @font-swatch5-font-size;
+    line-height: @font-swatch5-line-height;
+}
+
+
+/* Navigation CSS */
+/*
+    Document   : navigation
+    Created on : December 12, 2012, 3:30:52 PM
+    Author     : Dom
+    Description: Navigation
+*/
+
+.widget.navigation {
+    margin: 0;
+}
+
+.widget.navigation .navigation {
+    width: 100%;
+}
+
+.widget.navigation ul
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none outside none;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+}
+.widget.navigation ul.align-center
+{
+    text-align: center;
+}
+.widget.navigation ul.align-left
+{
+    text-align: left;
+}
+.widget.navigation ul.align-right
+{
+    text-align: right;
+}
+.widget.navigation ul li 
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    list-style: none;
+    width: 100%;
+    border-top: 1px solid lighten(@color-swatch2,20%);
+    background-color: @font-swatch6-background-color;
+    
+    /* fonts */
+    font-family:@font-swatch6-font-family;
+    font-size:@font-swatch6-font-size;
+}
+.widget.navigation ul li a
+{
+    display: block;
+    padding: 18px 20px;
+    color: @color-swatch5;
+    font-weight: @font-swatch6-font-weight;
+    text-decoration: none;
+}
+
+.navigation ul li:last-child
+{
+    border-right: none;
+}
+
+.navigation.nm-3-tabs ul li:last-child, .navigation.nm-4-tabs ul li:last-child
+{
+    border-bottom: none;
+}
+
+.widget.navigation ul li:hover
+{
+    background-color: darken(@color-swatch2,20%);
+    cursor: pointer;
+    color: @color-swatch2;
+}
+
+.widget.navigation ul li:hover a
+{
+    color: @color-swatch2;
+}
+
+
+/* Twitter CSS */
+/* 
+    Document   : twitter
+    Created on : 04-Jul-2012, 14:15:32
+    Author     : Dom
+    Description: Twitter Wishful
+*/
+
+
+.widget.twitter {
+}
+
+.widget.twitter a {
+   color: @color-swatch4;
+   font-size:@font-swatch5-font-size;
+   text-decoration: none;
+}
+
+.widget.twitter a:hover {
+    text-decoration: underline;
+}
+
+.widget.twitter ul {
+    padding: 20px;
+    margin: 0;
+}
+
+.widget.twitter ul li {
+    border-bottom: none;
+    list-style: none;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    padding-bottom: 30px;
+}
+
+.widget.twitter ul li:last-child {
+    padding-bottom: 0px;
+}
+
+.widget.twitter .twitter-profile-pic {
+    float: left;
+    margin-right: 20px;
+}
+
+.widget.twitter .twitter-content span.bk-full-name {
+    font-family: @font-swatch4-font-family;
+    color: @color-swatch3;
+    font-weight: bold;
+}
+
+.widget.twitter .twitter-content bk-full-name p {
+   
+}
+
+/* Facebook CSS */
+/* 
+    Document   : facebook
+    Author     : Dom
+    Description: Facebook
+*/
+
+.widget.facebooklike {
+    padding-left: 20px;
+}   
+
+
+
+/* Form CSS */
+/* 
+    Document   : Form
+    Created on : 17-Dec-2012, 14:15:32
+    Author     : Dom
+    Description: Form YelAudio
+*/
+
+.widget.contactform form {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.widget.contactform fieldset {
+    border: none;
+    padding: 0;
+}
+
+.widget.contactform fieldset label {
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
+    font-size:@font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+.widget.contactform fieldset input {
+    height: 40px;
+    width: 100%;
+    border: solid;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    background-color: lighten(@color-swatch2,50%);
+    -webkit-border-radius: px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-indent: 8px;
+    margin-top: 6px;
+    margin-bottom: 30px;
+}
+
+.widget.contactform fieldset textarea {
+    height: 100px;
+    width: 100%;
+    border: solid;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    background-color: lighten(@color-swatch2,50%);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-indent: 8px;
+    padding-top: 14px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.widget.contactform fieldset button.btn {
+    width: 100%;
+    font-family:@font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    color: @font-swatch7-color;
+    background-color: @font-swatch7-background-color;
+    padding: 8px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: none;
+}
+
+.widget.contactform fieldset button.btn:hover {
+    cursor: pointer;
+    background-color: darken(@color-swatch3,5%);
+}
+
+.widget.contactform fieldset button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.contactform fieldset button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.contactform fieldset button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.contactform fieldset button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.contactform fieldset button.btn.italic {
+    font-style: italic;
+}
+
+.widget.contactform fieldset button.btn.bold {
+    font-weight: bold;
+}
+
+
+/* COMPANY HEADER */
+
+.widget.companyheader span.logo
+{
+    display:block;
+    float: left;
+    width:33%;
+    text-align:right;
+}
+
+.widget.companyheader:before,
+.widget.companyheader:after 
+{
+    content: " ";
+    display: table;
+}
+
+.widget.companyheader:after 
+{
+    clear: both;
+}
+
+.widget.companyheader 
+{
+    *zoom: 1;
+}
+
+.widget.companyheader span.logo img
+{
+    max-width:100%;
+    height:auto;
+    margin-bottom: -6px;
+}
+
+.widget.companyheader span.logo-bottom
+{
+    display:none;
+}
+
+.widget.companyheader span.company-name
+{
+    display:block;
+    width:67%;
+    float: left;
+}
+
+.widget.companyheader span.company-name h1
+{
+    text-align:left;
+    margin: 6% 3%;
+}
+
+
+
+
+/* Extended Navigation */
+
+.widget.extendednavigation {
+}
+
+.widget.extendednavigation ul {
+    padding: 0;     
+    margin: 0;
+}
+            
+.widget.extendednavigation ul li {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    list-style: none;
+    width: 100%;
+    border-top: 1px solid lighten(@color-swatch2,20%);
+    background-color: @font-swatch6-background-color;
+    border-color: lighten(@color-swatch2,20%);
+    
+    /* fonts */
+    font-family:@font-swatch6-font-family;
+    font-size:@font-swatch6-font-size;
+}
+
+.widget.extendednavigation ul li:hover
+{
+    background-color: darken(@color-swatch2,10%);
+    cursor: pointer;
+    color: @color-swatch2;
+}
+
+.widget.extendednavigation ul li.folder a {
+    background-image: image('/hotelkoya/images/arrow-down.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.widget.extendednavigation ul.align-right li.folder a {
+    background-position: 0px center;
+}
+
+
+.widget.extendednavigation ul.align-right li
+{
+    background-image: none;
+}
+
+.widget.extendednavigation ul li a
+{
+    display: block;
+    padding: 18px 20px;
+    color: @color-swatch5;
+    font-weight: @font-swatch6-font-weight;
+    text-decoration: none;
+}
+
+.widget.extendednavigation li ul {
+    display: none;
+}
+
+.widget.extendednavigation ul li:hover ul {
+    display: block;
+}
+
+.widget.extendednavigation ul li:hover ul li {
+    background-image: none;
+    background-color: darken(@color-swatch2,10%);
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.widget.extendednavigation ul li:hover ul li a {
+    background-image: none;
+}
+
+.widget.extendednavigation ul li:hover ul li:hover {
+    background-color: darken(@color-swatch2,15%);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+
+
+
+/* DESKTOP REDIRECT */
+
+.widget.redirecttodesktop {
+    padding: 8px 0;
+    text-align: center;
+}
+
+.widget.redirecttodesktop a {
+    padding-right: 30px;
+    padding-top: 2px;
+    background-image: image('/trvl/images/desktop.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    color: @font-swatch5-color;
+    font-family: Helvetica, arial;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.widget.redirecttodesktop a:hover, .desktop a:active {
+    background-image: image('/trvl/images/desktop.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+/* TWEET THIS */
+
+.widget.tweet {
+   padding: 20px 0; 
+   text-align: center;
+}
+
+.widget.tweet a {
+    background-color: darken(@color-swatch1,5%);
+    color: @font-swatch5-color;
+    padding: 12px 10px 12px 40px;
+    background-image: image('/hotelkoya/images/twitter.png');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border: #d6d6d6 solid 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 3px;
+    color: #333;
+    font-family: Helvetica, arial;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.widget.tweet a:hover, .tweet a:active {
+    background-color: darken(@color-swatch1,10%);
+    background-image: image('/hotelkoya/images/twitter.png');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    cursor: pointer;
+}
+
+.widget.tweet a:active {
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.1);
+}
+
+
+
+/* SOCIAL BAR */
+
+.widget.socialicons {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.widget.socialicons a {
+    text-decoration: none;
+    text-indent: -9999px;
+    height: 32px;
+    width: 32px;
+}
+
+.widget.socialicons span a {
+    display: inline-block;
+    margin-right: 6px;
+    background-repeat: no-repeat;
+}
+.widget.socialicons span.bk-socialicons-twitter a {
+    background-image: image('/hotelkoya/images/socialicons-twitter.png')
+}
+
+.widget.socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/hotelkoya/images/socialicons-linkedin.png');
+}
+
+.widget.socialicons span.bk-socialicons-facebook a {
+    background-image: image('/hotelkoya/images/socialicons-facebook.png');
+}
+
+.widget.socialicons span.bk-socialicons-rss a {
+    background-image: image('/hotelkoya/images/socialicons-rss.png');
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/hotelkoya/images/socialicons-googleplus.png');
+}
+
+.widget.socialicons span.bk-socialicons-youtube a {
+    background-image: image('/hotelkoya/images/socialicons-youtube.png');
+}
+
+
+
+
