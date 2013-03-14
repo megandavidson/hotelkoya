@@ -1,0 +1,9 @@
+{
+	"name":"Hotel Koya",
+	"directory":"hotelkoya",
+	"thumbnail":"/hotelkoya/hotelkoya.jpg",
+	"screenshot":"/hotelkoya/hotelkoya.jpg",
+	"pageTypes":[],
+	"defaultColorSwatch":"Warmth 2",
+	"defaultFontSwatch":"Raleway"
+}
