@@ -649,7 +649,6 @@ hr.line.align-right {
 
 .widget.extendednavigation 
 {
-    float: right;
 }
 
 .widget.extendednavigation ul {
@@ -680,7 +679,7 @@ hr.line.align-right {
     color: @color-swatch2;
 }
 
-.widget.extendednavigation ul li.folder a {
+.widget.extendednavigation ul li.folder {
     background-image: image('/hotelkoya/images/arrow-down.png');
     background-position: right center;
     background-repeat: no-repeat;
@@ -690,8 +689,8 @@ hr.line.align-right {
 .widget.extendednavigation ul li.folder .text 
 {
     display:inline-block;
-    padding: 18px 0px;
-    color: @color-swatch4;
+    padding: 18px 20px;
+    color: @color-swatch5;
 }
 
 .widget.extendednavigation ul li.folder ul li .text 
@@ -749,6 +748,9 @@ hr.line.align-right {
     -ms-transition: all .3s ease-in-out;
 }
 
+.widget.extendednavigation ul.align-right li.folder {
+    background-position: left center;
+}
 
 
 
