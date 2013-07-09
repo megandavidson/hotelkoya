@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<header>
+{{widget('companyheader', 'companyheader', {"defaultlogo": asset('images/hotelkoya-logo.png')})|raw}}
+{{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+</header>
+
+{{zone('main')|raw}}
+
+<footer>
+{{widget('companyaddress', 'companyaddressfooter', {"bkprofileaddress":profile.address, 
+"bkprofileaddress1":profile.address1, "bkprofileaddress2":profile.address2, 
+"bkprofilepostalcode":profile.postalcode, "bkprofilecountry":profile.country})|raw}}
+</footer>
+
+
+{% endblock %}
