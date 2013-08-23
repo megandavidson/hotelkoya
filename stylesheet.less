@@ -1,8 +1,3 @@
-/* SCALING FUNCTION */
-.scale-value ( @property, @value: 13, @scale : 1) {
-  @property:  (@value * @scale)px;
-}
-
 body {
   background-color: @color-swatch1;
   margin: 0;
@@ -602,15 +597,6 @@ footer .widget.content {
 }
 
 
-
-/* ===============================
-   CLICK TO CALL - DOESN'T SHOW IN DESKTOP
-   =============================== */
-
-  .widget.clicktocall {
-     display:none;
-   }
-
 /* ===============================
    BUTTON CSS
    =============================== */
@@ -729,6 +715,8 @@ footer .widget.content {
     display:block;
     max-width: 100%;
     margin: 0 auto;
+    border: 0;
+    border-width: 0;
 }
 
 .widget.image {
@@ -911,34 +899,18 @@ hr.line.align-right {
 }
 
 .widget.clicktocall a {
-  padding: 8px;
   margin: 2.2em auto;
-  border: 1px solid @color-swatch3;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background: @font-swatch7-background-color;
-  color: @font-swatch7-color;
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  color: darken(@font-swatch5-color,20%);
   text-decoration: none;
-  cursor: pointer;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-
+  cursor: default;
 }
 
 .widget.clicktocall a:hover {
-  background: @font-swatch7-background-color-hover;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
-  text-decoration: none;
-  }
+ text-decoration: none;
+}
 
 .widget.clicktocall a.justifyleft
 {
@@ -1752,6 +1724,16 @@ footer .widget.profile .twitter span {
   border: 1px solid #DDDDDD;
 }
 
+
+@media only screen and (max-width : 1200px) and (min-width : 768px) {
+  
+   /* Tablet view: feature */
+   .widget.feature .spare {
+    width: 50%;
+   }
+}
+
+
 /* ===============================
    IPAD WIDTH
    =============================== */
@@ -1885,7 +1867,7 @@ footer .widget.profile .twitter span {
   }
 
   .widget.feature .spare {
-      width: 40%;
+      width: 60%;
       padding: 20px;
   }
 
@@ -2087,6 +2069,41 @@ blockquote {
 }
 
   /* CLICK TO CALL */
+
+.widget.clicktocall {
+  padding: 10px 0;
+}
+
+.widget.clicktocall a {
+  padding: 8px;
+  margin: 2.2em auto;
+  border: 1px solid @color-swatch3;
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight:@font-swatch7-font-weight;
+  background: @font-swatch7-background-color;
+  color: @font-swatch7-color;
+  text-decoration: none;
+  cursor: pointer;
+  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
+  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
+
+}
+
+.widget.clicktocall a:hover {
+  background: @font-swatch7-background-color-hover;
+  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
+  text-decoration: none;
+  }
+
   .widget.clicktocall a.justifyleft {
     text-align: left;
   }
