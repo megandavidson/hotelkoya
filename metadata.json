@@ -115,7 +115,7 @@
         },
         "font8": {
             "font-family": "Raleway",
-            "font-size": "30px",
+            "font-size": "32px",
             "font-weight": "400",
             "line-height": "42px",
             "color": "@color-swatch5",
@@ -123,9 +123,9 @@
         },
         "font9": {
             "font-family": "Raleway",
-            "font-size": "24px",
+            "font-size": "20px",
             "font-weight": "400",
-            "line-height": "36px",
+            "line-height": "30px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
