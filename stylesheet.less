@@ -80,7 +80,7 @@ blockquote {
 }
   blockquote:before {
   font-family: georgia;
-  color:@color-swatch3;
+  color:@color-swatch5;
   content:open-quote;
   font-size:4em;
   line-height:.1em;
@@ -94,7 +94,7 @@ blockquote {
   font-size:@font-swatch5-font-size;
   font-weight:@font-swatch5-font-weight;
   line-height:@font-swatch5-line-height;
-  color:lighten(@color-swatch5,23%);
+  color:lighten(@color-swatch5,15%);
 }
 
 
@@ -1390,8 +1390,8 @@ footer .widget.profile .twitter span {
 .widget.profile .bk-profile-socialicons a {
     text-decoration: none;
     text-indent: -9999px;
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
 }
 
 .bk-profile-socialicons span a {
@@ -1402,6 +1402,9 @@ footer .widget.profile .twitter span {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+    background-position: center;
+    margin-bottom: 6px;
+    background-size: 18px;
 }
 
 
@@ -1420,8 +1423,8 @@ footer .widget.profile .twitter span {
 .widget.socialicons a {
     text-decoration: none;
     text-indent: -9999px;
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
 }
 
 .widget.socialicons span a {
@@ -1432,74 +1435,107 @@ footer .widget.profile .twitter span {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
-}
-
- span.bk-socialicons-twitter a {
-    background-image: image('/images/socialicons-twitter.svg');
-    background-repeat: no-repeat;
     background-position: center;
-    background-size: 22px;
+    margin-bottom: 6px;
+    background-size: 18px;
 }
 
- span.bk-socialicons-twitter a:hover {
-      background-color: #4099FF;
+/* SVG ICONS */
+
+.svg .widget.socialicons span.bk-socialicons-twitter a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/social/socialicons-twitter.svg');
 }
 
- span.bk-socialicons-linkedin a {
-    background-image: image('/images/socialicons-linkedin.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 22px;
-}
- span.bk-socialicons-linkedin a:hover {
-  background-color: #007bb6;
+.svg .widget.socialicons span.bk-socialicons-linkedin a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/social/socialicons-linkedin.svg')
 }
 
- span.bk-socialicons-facebook a {
-    background-image: image('/images/socialicons-facebook.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 22px;
+.svg .widget.socialicons span.bk-socialicons-facebook a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/social/socialicons-facebook.svg')
 }
 
- span.bk-socialicons-facebook a:hover {
-  background-color: #3B5998;
+.svg .widget.socialicons span.bk-socialicons-rss a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/social/socialicons-rss.svg')
 }
 
- span.bk-socialicons-rss a {
-    background-image: image('/images/socialicons-rss.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 22px;
+.svg .widget.socialicons span.bk-socialicons-googleplus a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/social/socialicons-googleplus.svg')
 }
 
- span.bk-socialicons-rss a:hover {
-  background-color: #FF6600;
+.svg .widget.socialicons span.bk-socialicons-youtube a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/social/socialicons-youtube.svg')
 }
 
- span.bk-socialicons-googleplus a {
-    background-image: image('/images/socialicons-googleplus.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 22px;
+/* PNG ICONS */
+
+.widget.socialicons span.bk-socialicons-twitter a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/social/socialicons-twitter.png');
 }
 
- span.bk-socialicons-googleplus a:hover {
-  background-color: #dd4b39;
+.widget.socialicons span.bk-socialicons-linkedin a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/social/socialicons-linkedin.png')
 }
 
- span.bk-socialicons-youtube a {
-    background-image: image('/images/socialicons-youtube.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 22px;
+.widget.socialicons span.bk-socialicons-facebook a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/social/socialicons-facebook.png')
 }
 
- span.bk-socialicons-youtube a:hover {
-  background-color: #bb0000;
+.widget.socialicons span.bk-socialicons-rss a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/social/socialicons-rss.png')
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/social/socialicons-googleplus.png')
+}
+
+.widget.socialicons span.bk-socialicons-youtube a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/social/socialicons-youtube.png')
 }
 
 
+/* A:HOVER ICONS */
+
+.widget.socialicons span.bk-socialicons-twitter a:hover,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a:hover {
+    background-color: #4099FF;
+}
+
+.widget.socialicons span.bk-socialicons-linkedin a:hover,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a:hover {
+    background-color: #007bb6;
+}
+
+.widget.socialicons span.bk-socialicons-facebook a:hover,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a:hover {
+    background-color: #3B5998;
+}
+
+.widget.socialicons span.bk-socialicons-rss a:hover,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a:hover {
+    background-color: #FF6600;
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a:hover,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a:hover {
+    background-color: #dd4b39;
+}
+
+.widget.socialicons span.bk-socialicons-youtube a:hover,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a:hover {
+    background-color: #bb0000;
+}
 
 
 
