@@ -294,6 +294,7 @@ footer .widget.content {
   float: right;
   position: relative;
   background-color: transparent;
+  max-width: 690px;
 }
 
 .widget.extendednavigation ul {
@@ -726,7 +727,6 @@ footer .widget.content {
 {
     display:block;
     max-width: 100%;
-    margin: 0 auto;
     border: 0;
     border-width: 0;
 }
@@ -742,7 +742,6 @@ footer .widget.content {
     font-size: @font-swatch4-font-size;
     color:  @font-swatch4-color;
     text-decoration: none;
-    text-align: center;
     line-height: @font-swatch4-line-height;
 }
 
@@ -757,7 +756,6 @@ footer .widget.content {
 .widget.image span.image-description {
     display: block;
     margin:0 0 10px;
-    text-align: center;
     font-family: @font-swatch5-font-family;
     font-weight: @font-swatch5-font-weight;
     font-size: @font-swatch5-font-size;
@@ -1401,7 +1399,8 @@ footer .widget.profile .twitter span {
 
 .widget.profile .bk-profile-socialicons a {
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
+    white-space: nowrap;
     height: 32px;
     width: 32px;
 }
@@ -1434,7 +1433,8 @@ footer .widget.profile .twitter span {
 
 .widget.socialicons a {
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
+    white-space: nowrap;
     height: 32px;
     width: 32px;
 }
@@ -1831,6 +1831,7 @@ footer .widget.profile .twitter span {
   /* NAV */
 
   .widget.extendednavigation {
+    max-width: 100%;
     width: 100%;
     padding: 0;
     border-top: 4px solid @color-swatch2;
