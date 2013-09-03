@@ -77,10 +77,15 @@ p
 
 blockquote {
   quotes:"\201C""\201D""\2018""\2019";
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:lighten(@color-swatch5,15%);
 }
   blockquote:before {
   font-family: georgia;
-  color:@color-swatch5;
+  color:@color-swatch3;
   content:open-quote;
   font-size:4em;
   line-height:.1em;
@@ -89,7 +94,6 @@ blockquote {
 }
   blockquote p {
   display: inline;
-  font-style: italic;
   font-family:@font-swatch5-font-family;
   font-size:@font-swatch5-font-size;
   font-weight:@font-swatch5-font-weight;
