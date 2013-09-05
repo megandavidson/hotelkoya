@@ -39,12 +39,16 @@
 				menu.slideToggle();
 			});
 
-			$(window).resize(function(){
+            function menuToggle() {
         		var w = $(window).width();
+
         		if(w > 320 && menu.is(':hidden')) {
         			menu.removeAttr('style');
-        		}
-    		});
+        		}   
+            }
+
+			$(window).bind('resize', menuToggle);
+            $(window).bind('orientationchange', menuToggle);
 		});
 	</script>
 
