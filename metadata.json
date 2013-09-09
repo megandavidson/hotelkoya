@@ -4,8 +4,8 @@
 	"screenshot":"hotelkoya.png",
     "tags": {
     "en": ["colorful", "bright", "hotel", "holiday", "modern", "colourful"],
-    "es": ["colorido", "claro", "hotel", "vacaciones", "moderno", "colorido"],
-    "br": ["colorido", "claro", "hotel", "ferias", "moderno", "colorido"]
+    "es": ["colorido", "claro", "hotel", "vacaciones", "moderno"],
+    "br": ["colorido", "claro", "hotel", "ferias", "moderno"]
     },
 	"colorSwatches":
     {
