@@ -2,6 +2,11 @@
 	"name":"Hotel Koya",
 	"thumbnail":"hotelkoya.png",
 	"screenshot":"hotelkoya.png",
+    "tags": {
+    "en": ["colorful", "bright", "hotel", "holiday", "modern", "colourful"],
+    "es": ["colorido", "claro", "hotel", "vacaciones", "moderno", "colorido"],
+    "br": ["colorido", "claro", "hotel", "ferias", "moderno", "colorido"]
+    },
 	"colorSwatches":
     {
         "Swatch 1": {
