@@ -1,8 +1,146 @@
 {
 	"name":"Hotel Koya",
-	"thumbnail":"hotelkoya.jpg",
-	"screenshot":"hotelkoya.jpg",
-	"pageTypes":[],
-	"defaultColorSwatch":"Warmth 2",
-	"defaultFontSwatch":"Raleway"
+	"thumbnail":"hotelkoya.png",
+	"screenshot":"hotelkoya.png",
+    "tags": {
+    "en": ["colorful", "bright", "hotel", "holiday", "modern", "colourful"],
+    "es": ["colorido", "claro", "hotel", "vacaciones", "moderno"],
+    "br": ["colorido", "claro", "hotel", "ferias", "moderno"]
+    },
+	"colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#f3f3f3",
+            "color3":"#f4594f",
+            "color4":"#373737",
+            "color5":"#787878",
+            "color6":"#484848",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#EBE5E0",
+            "color3":"#E7952F",
+            "color4":"#513434",
+            "color5":"#77665D",
+            "color6":"#513434",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#D7D6D5",
+            "color3":"#38AD9E",
+            "color4":"#38332B",
+            "color5":"#888580",
+            "color6":"#38332B",
+            "color7":"#ffffff"
+        },
+        "Swatch 4": {
+            "color1":"#ffffff",
+            "color2":"#EAE6E7",
+            "color3":"#945571",
+            "color4":"#473E42",
+            "color5":"#787878",
+            "color6":"#473E42",
+            "color7":"#ffffff"
+        },
+        "Swatch 5": {
+            "color1":"#ffffff",
+            "color2":"#E9EBEB",
+            "color3":"#51C7D0",
+            "color4":"#373737",
+            "color5":"#563B28",
+            "color6":"#563B28",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Raleway",
+        "font1": {
+            "font-family": "Raleway",
+            "font-size": "32px",
+            "font-weight": "400",
+            "line-height": "40px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "Raleway",
+            "font-size": "30px",
+            "font-weight": "inherit",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "Raleway",
+            "font-size": "26px",
+            "font-weight": "inherit",
+            "line-height": "34px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "Raleway",
+            "font-size": "20px",
+            "font-weight": "600",
+            "line-height": "28px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "Helvetica",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "Raleway",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "23px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch3",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+        },
+        "font7": {
+            "font-family": "Raleway",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "Raleway",
+            "font-size": "32px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "Raleway",
+            "font-size": "20px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "Raleway",
+            "font-size": "28px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        }
+    }
 }

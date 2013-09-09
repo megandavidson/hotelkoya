@@ -2,23 +2,26 @@
 
 {% block content %}
 
-<div class="bk-pt-default">
 
  <header>
    <div class="wrapper clearfix">
         <div class="companyheader clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.svg')})|raw}}
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
             {{widget('extendednavigation', 'navigationheader', {})|raw}}
 
-        <div class="header-bottom-line"></div>   
-            
+         <div class="header-bottom-line"></div>   
     </div>
+
 </header>
 
+<section>
+  {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"MAURIS ERAT","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+
 <div class="main wrapper clearfix">
-    {{zone('main')|raw}}
+  {{zone('main')|raw}}
 </div>  
 
 <footer>
@@ -40,6 +43,5 @@
     </div>
 </footer>
 
-</div>
 
 {% endblock %}
