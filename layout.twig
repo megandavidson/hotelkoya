@@ -42,7 +42,12 @@
 
 			$(pull).on('click', function(e) {
 				e.preventDefault();
-				menu.slideToggle();
+				if (menu.is(':visible')) {
+					menu.hide();	
+				} else {
+					menu.show();
+				}
+
 			});
 
             function menuToggle() {
@@ -50,7 +55,7 @@
 
         		if(w > 320 && menu.is(':hidden')) {
         			menu.removeAttr('style');
-        		}   
+        		}
             }
 
 			$(window).bind('resize', menuToggle);
