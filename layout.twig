@@ -27,7 +27,13 @@
 
 	<link rel="stylesheet" href="//{{env.assetSubdomain}}.{{ brand.domain }}/templates/common/responsive-columns.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	{% include basekit.headScript %}
+</head>
+<body class="{{ page.backgroundClass }}">
+
+	{% block content %}
+	{% endblock %}
+
 	<script>
 		$(function() {
 			var pull 		= $('.pull');
@@ -36,7 +42,12 @@
 
 			$(pull).on('click', function(e) {
 				e.preventDefault();
-				menu.slideToggle();
+				if (menu.is(':visible')) {
+					menu.hide();	
+				} else {
+					menu.show();
+				}
+
 			});
 
             function menuToggle() {
@@ -44,20 +55,13 @@
 
         		if(w > 320 && menu.is(':hidden')) {
         			menu.removeAttr('style');
-        		}   
+        		}
             }
 
 			$(window).bind('resize', menuToggle);
             $(window).bind('orientationchange', menuToggle);
 		});
 	</script>
-
-	{% include basekit.headScript %}
-</head>
-<body class="{{ page.backgroundClass }}">
-
-	{% block content %}
-	{% endblock %}
 
 	{% include basekit.bodyScript %}
 </body>

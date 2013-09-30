@@ -843,7 +843,8 @@ footer .widget.content {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    margin-bottom: -50px;
+    margin-bottom: -310px;
+    max-height: 284px;
     background:@color-swatch2;
     padding: 10px;
     text-align: center;
@@ -872,6 +873,20 @@ footer .widget.content {
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+/* Lightbox */
+
+.lb-data .lb-caption, .lb-data .lb-number {
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight: @font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:lighten(@font-swatch5-color,50%);
+}
+
+.lb-data .lb-number {
+  font-size:bkscale(@font-swatch5-font-size,0.9);
 }
 
 /* ===============================
@@ -1353,6 +1368,7 @@ footer .widget.profile span {
 .widget.profile .twitter {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .widget.profile .twitter .twitter-profile-pic {
@@ -1849,6 +1865,10 @@ footer .widget.profile .twitter span {
     top: -50px;
   }
 
+  #page-zones__template-widgets__extendednavigation-navigationheader {
+    overflow: visible;
+  }
+
   /* NAV */
 
  .widget .extendednavigation ul {
@@ -1947,10 +1967,18 @@ footer .widget.profile .twitter span {
       margin: 10px 0 5px 0;
   }
 
+
+   /* Gallery */
+
  .widget.gallery ul.gallery-widget li
   {
       width: 50%;
       padding-bottom: 50%;
+  }
+
+  .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
+      font-size:bkscale(@font-swatch5-font-size,0.9);
+      line-height:bkscale(@font-swatch5-line-height,0.9);
   }
 
      /* Slideshow */
@@ -2107,8 +2135,14 @@ blockquote {
   }
 
 
+ /* GALLERY */
 
-  /* GALLERY */
+  .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
+    max-height: 150px;
+    font-size:bkscale(@font-swatch5-font-size,0.8);
+    line-height:bkscale(@font-swatch5-line-height,0.8);
+  }
+
   .widget.gallery p {
     padding: 10px;
   }
