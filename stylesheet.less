@@ -1,4 +1,14 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
 @import templatecommon('/paypal.less');
+@import templatecommon('/dropbox.less');
+
+
+/* ===============================
+   TEMPLATE STYLES
+   =============================== */
 
 body {
   background-color: @color-swatch1;
@@ -617,31 +627,20 @@ footer .widget.content {
    PAYPAL BUTTON
    =============================== */
 
-
 .widget.paypalbuynow .widget.button.paypal {
   border: 1px solid @color-swatch3;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-}
-
-.widget.paypalbuynow .widget.button.paypal:hover {
-   background: @font-swatch7-background-color-hover;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
-  cursor: pointer;
+  box-shadow: inset 0 3px 14px rgba(255, 255, 255, 0.5);
 }
 
 
+/* ===============================
+   DROPBOX WIDGET
+   =============================== */
+
+.widget.dropbox .b-wrap .btn {
+  border: 1px solid @color-swatch3;
+  box-shadow: inset 0 3px 14px rgba(255, 255, 255, 0.5);
+}
 
 
 /* ===============================
