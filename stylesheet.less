@@ -341,7 +341,7 @@ footer .widget.content {
 .widget.extendednavigation ul li {
   float: left;
   display: block;
-  padding: 26px 0 16px 0;
+  padding: 26px 0 19px 0;
   border-bottom: 4px solid @color-swatch2;
 }
 
@@ -378,10 +378,13 @@ footer .widget.content {
 }
 
 .widget.extendednavigation ul li.folder {
-  background-image: image('/images/arrow-down.png');
+  //background-image: image('/images/arrow-down.png');
   background-size: 11px;
   background-position: right center;
   background-repeat: no-repeat;
+  &:after {
+	  top: 51%;
+  }
 }
 
 .widget.extendednavigation li a:hover {
@@ -1335,9 +1338,9 @@ hr.line.align-right {
   padding: 8px 13px 8px 38px;
   margin: 0;
   border: none;
-  background-image: image('/images/twitter.png');
+  //background-image: image('/images/twitter.png');
   background-repeat: no-repeat;
-  background-position: 13px 14px;
+  background-position: 9px 7px;
   margin: 2.2em auto;
   border: 1px solid darken(#2cbfff,10%);
   font-family: @font-swatch7-font-family;
