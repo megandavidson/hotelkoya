@@ -9,7 +9,7 @@
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
-            {{widget('extendednavigation', 'navigationheader', {})|raw}}
+            {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
 
          <div class="header-bottom-line"></div>   
     </div>
@@ -37,7 +37,7 @@
            </div>
            <div class="column columns-three-right">
                 {{widget('content', 'footercolumn3content1', {"content":"<h4>Lorem Ipsum Dolor</h4>"})|raw}}
-                {{widget('profile', 'footercolumn3socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+                {{widget('profile', 'footercolumn3socialicons', { 'profileType' : 'socialicons' })|raw}}
            </div>
         </div>
     </div>

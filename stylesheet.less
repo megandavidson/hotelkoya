@@ -192,7 +192,7 @@ footer.bk-footer .widget.content {
   float: right;
   position: relative;
   background-color: transparent;
-  max-width: 690px;
+  width: 80%;
 }
 
 .widget.extendednavigation a.pull {
@@ -200,7 +200,6 @@ footer.bk-footer .widget.content {
 }
 
 .widget.extendednavigation ul {
-  float: left;
   padding: 0;
   margin: 0;
 }
@@ -290,7 +289,6 @@ footer.bk-footer .widget.content {
 .widget.extendednavigation li:hover > ul > li {
   display: block;
   width: 100%;
-  text-align: left;
   border-bottom: 1px solid @color-swatch1;
   padding: 10px 0;
 }
@@ -810,7 +808,7 @@ footer.bk-footer .widget.content {
    =============================== */
 
 .widget {
-    &.bloglistposts {
+    &.blogpostlist {
         .blog-post-item {
             border-bottom: 1px dotted @color-swatch5;
         }
@@ -2222,6 +2220,10 @@ footer.bk-footer .widget.profile .twitter span {
      /* Slideshow */
   .widget.responsiveslideshow .slideshow-image-list {
       height: 400px;
+  }
+  .widget .extendednavigation ul.align-right li.folder:after {
+    left: 5px;
+    right: inherit;
   }
 
 

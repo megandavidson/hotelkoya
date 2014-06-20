@@ -2,6 +2,7 @@
 	"name":"Hotel Koya",
 	"thumbnail":"hotelkoya.png",
 	"screenshot":"hotelkoya.png",
+	"templateType":"standard",
     "tags": {
     "en": ["colorful", "bright", "hotel", "holiday", "modern", "colourful", "travel", "hospitality", "turism", "clean", "simple", "sans-serif"],
     "es": ["colorido", "claro", "hotel", "vacaciones", "moderno", "viaje", "hosteleria", "turismo", "limpio", "simple", "sans-serif"],
