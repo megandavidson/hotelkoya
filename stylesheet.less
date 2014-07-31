@@ -4,10 +4,10 @@
 
 @import "@{templateCommon}/basekit-bootstrap.less";
 
-// @import "@{templateLocal}/css/common-forms.less";
-// @import "@{templateLocal}/css/widgets-blog.less";
-// @import "@{templateLocal}/css/widgets-ecom.less";
-// @import "@{templateLocal}/css/widgets-menu.less";
+@import "@{templateLocal}/css/common-forms.less";
+@import "@{templateLocal}/css/widgets-blog.less";
+@import "@{templateLocal}/css/widgets-ecom.less";
+@import "@{templateLocal}/css/widgets-menu.less";
 
 @desktop: ~"only screen and (min-width : 769px)";
 
@@ -382,374 +382,6 @@ footer.bk-footer {
 
 
 
-/* ===============================
-MENU
-   =============================== */
-
-.container {
-    border:1px solid black;
-    margin-top:40px;
-    padding-bottom:40px;
-}
-
-.widget.menu .menu-subsection {
-    border:0px;
-}
-
-.widget.menu {
-    margin:0 auto;
-    @media only screen and (max-width: 1084px) {
-         width: 90%;
-    }
-    @media @tablet {
-        background-image: none;
-        width:100%;
-    }
-
-    .main {
-        width: 90%;
-        padding-top:30px;
-        margin: 0 auto;
-            @media only screen and (max-width: 1084px) {
-                width: 93%;
-            }
-            @media @tablet {
-                background-color: @color-swatch1;
-                width:90%;
-                padding: 10px 0;
-            }
-            @media @mobile {
-                margin-bottom: 10px;
-                padding:0;
-            }
-
-            ol, li {    /* removes list-style */
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            } 
-
-
-            /* MENU-HEADER AND SUB-SECTION HEADER */
-
-            .menu-header, .menu-subsection-header {
-                padding: 0 0 1.2em;
-                    @media @tablet {
-                        padding: 1.25em 0 0.75em;
-                    }
-                    h1, h2, {    /* menu-name menu-section-name */
-                        text-align: center;
-                        overflow: hidden; 
-                    &:before, &:after {
-                        content: "";
-                        @media only screen and (max-width: 480px) {
-                            content: none;
-                            display: block;
-                            height: auto;
-                            width: auto;
-                            margin-bottom: 0;
-                        }
-                    }
-                    &:before {
-                        @media only screen and (max-width: 480px) {
-                            right: 0;
-                            margin-left: 0;
-                         }
-                    }
-                    &:after {
-                        @media only screen and (max-width: 480px) {
-                            right: 0;
-                            margin-left: 0;
-                         }
-                    }
-                @media only screen and (max-width: 480px) {
-                     padding: 1em 0 0.5em;
-                }
-            }
-                    p {    /* menu-description  menu-section-description  menu-availability */
-                        text-align: center;       
-                    }  
-            }   /* end MENU-HEADER AND SUB-SECTION HEADER */
-
-
-            /* ITEMS */
-
-            .menu-items { /* ol */
-
-                li {    /* menu-item */
-                    display:block;
-                    position: relative;
-                    &.menu-item-promoted { /* menu-item-promoted */
-                        padding: 1.2em;
-                        margin: 11px 1px 20px;
-                        border: 5px solid @color-swatch3;
-                        .inner-item {
-                            border: 0;
-                            padding: 0;
-                            margin: 0;
-                        }
-                        h3 {
-                            width: auto;
-                            margin-top: 0 !important;
-                            margin-right: 1em !important;
-                        }
-                    }   /* end menu-item-promoted */
-
-                    .inner-item {
-                        border-bottom: 1px solid @color-swatch3;
-                        padding-bottom: 30px;
-                        margin-bottom: 30px;
-                        h3 {    /* menu-item-name */  
-                            padding: 0;
-                            font-family: @font-swatch3-font-family;
-                            color: @font-swatch3-color;
-                        }
-                        /* Menu image background */
-
-                        .menu-item-image-wrap {
-                           background-size: cover;
-                           background-position: center;
-                           -webkit-background-size: cover;
-                           -moz-background-size: cover;
-                           -o-background-size: cover;
-                           clear:both;
-                           background-repeat: no-repeat;
-                           height: 200px;
-                           background-position: center;
-                           -webkit-border-radius: 5px;
-                           -moz-border-radius: 5px;
-                           border-radius: 5px;
-                           img {
-                               display: none;
-                           }
-                        }
-                        .menu-item-price p {   /* standard-price */
-                            font-family:@font-swatch3-font-family;
-                            font-size:@font-swatch3-font-size;
-                            font-weight: @font-swatch3-font-weight;
-                            line-height:@font-swatch3-line-height;
-                            color: @font-swatch3-color;
-                            letter-spacing: @font-swatch3-letter-spacing;
-                            padding: 0px;
-                            margin: 0;
-                            display: block;
-                        }
-                        p {    /* item-description */
-                            font-family:@font-swatch5-font-family;
-                            font-size:@font-swatch5-font-size;
-                            font-weight: @font-swatch5-font-weight;
-                            line-height:@font-swatch5-line-height;
-                            color:@font-swatch5-color;
-                            letter-spacing: @font-swatch5-letter-spacing;
-                            float: left;
-                            padding: 0;
-                        }
-                        h4 {  /* nutritional-title */
-                            font-family:@font-swatch4-font-family;
-                            font-size:@font-swatch4-font-size;
-                            font-weight: @font-swatch4-font-weight;
-                            line-height:@font-swatch4-line-height;
-                            color: @font-swatch4-color;
-                            letter-spacing: @font-swatch4-letter-spacing;
-                            float: left;
-                            width: 100%;
-                            margin: 0;
-                            padding: 0;
-                        }
-                        .menu-item-nutritional-prop { 
-                            font-size:@font-swatch5-font-size;
-                            font-weight: @font-swatch5-font-weight;
-                            line-height:@font-swatch5-line-height;
-                            color: @font-swatch5-color;
-                            float: left;
-                            width: 100%;
-                            margin: 0;
-                            padding: 0;
-                        }
-                        .menu-section-item-dietary-props {
-                                margin-top: 0.5em;
-                                padding: 0;
-                                clear: both;
-                                display: block;
-                                .dietary-icon {
-                                    background-color: @color-swatch3;
-                                    width: auto;
-                                    height: auto;
-                                    border: 0;
-                                    background-repeat: no-repeat;
-                                    background-size: 19px;
-                                    background-position: center;
-                                    font-family:@font-swatch5-font-family;
-                                    font-size:@font-swatch5-font-size;
-                                    z-index: 9999999;
-                                    color: @color-swatch1;
-                                    margin-right: 5px;
-                                    padding:5px;
-                                    background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-                                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-                                    background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-                                    background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-                                    background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-                                    background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-                                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-                                }                                
-                                .not-spicy-icon {
-                                    display:none;
-                                }
-
-                            } /* end menu-section-item-dietary-props */ 
-
-                        .menu-item-description, .menu-section-item-description {
-                            margin-bottom: 0.5em;
-                            width: 100%;
-                        }
-
-                    }   /* end inner-item */
-
-                }  /* end li .menu-item */
-
-            }   /* end ol .menu-items */  
-
-            .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */  
-                border: 6px solid @color-swatch3;
-                padding: 2em 2em 0;
-                margin-bottom: 2em;
-                position: relative;
-                &:before {
-                   content: " ";
-                   position: absolute;
-                   top: 3px;
-                   left: 3px;
-                   right: 3px;
-                   bottom: 3px;
-               }
-                @media @mobile {
-                    padding: 0 2em 0;
-                }
-                .menu-subsection-header {
-                    border-bottom: 1px solid @color-swatch3;
-                    margin-bottom: 20px;
-                }
-            } /* end PROMOTED SUB-SECTION */
-
-            .menu-info {
-                display: block;
-                text-align: center;
-                margin: 10px 0;
-                padding: 20px;
-                width: 100%;
-                @media @tablet { 
-                    margin: 0;
-                    padding: 0px;
-                }
-                p {    /* menu-note */
-                    float: left;
-                    width: 100%;
-                    color: @color-swatch4;
-                    margin-bottom: 10px;
-                }
-                dl {    /* menu-dietary-key */
-                    display: inline-block;
-                    margin: 5px 0;
-                    text-align: block;
-                    dt, dd {
-                        display: inline-block;
-                    }
-                    dt {    /* dietary-icon */
-                        vertical-align: top; 
-                        width: 20px;
-                        height: 20px;
-                        background-size: 20px;
-                        background-color: @color-swatch3;
-                        border: 2px solid @color-swatch6;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
-                    dd {    /* text for icon */
-                        font-family:@font-swatch5-font-family;
-                        font-size:@font-swatch5-font-size;
-                        font-weight: @font-swatch5-font-weight;
-                        line-height:@font-swatch5-line-height;
-                        color: @font-swatch5-color; 
-                        letter-spacing: @font-swatch5-letter-spacing;
-                        margin: 0 5px -7px;
-                    }   
-                }/* end dl */
-            }   /* end menu-info */
-    }/* end main */
-
-} /* end .widget.menu */
-
-/* ===============================
-  BLOG
-   =============================== */
-
-.widget {
-    &.blogpostlist {
-        .blog-post-item {
-            border-bottom: 1px dotted @color-swatch5;
-        }
-
-    }
-}
-
-.blog-post-item {
-    margin: 1.5em 0;
-    padding-bottom: 1em;
-    h2 {
-        a {
-            font-family: @font-swatch2-font-family;
-            font-size: @font-swatch2-font-size;
-            font-weight: @font-swatch2-font-weight;
-            line-height: @font-swatch2-line-height;
-            color: @font-swatch2-color;
-            letter-spacing: @font-swatch2-letter-spacing;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-.blog-post-metadata {
-    background-color: transparent;
-    background-image: none;
-    margin-top: 0;
-    text-align: left;
-}
-
-.blog-list-footer {
-    background-color: transparent;
-    background-image: none;
-}
-
-.blog-post-more-link {
-    float: left;
-    width: 100%;
-}
-
-/* BLOG SEARCH */
-.blogsearch {
-    form {
-        button {
-            padding: 10px;
-            color: @font-swatch7-color;
-            font-size: @font-swatch6-font-size;
-            font-weight: @font-swatch6-font-weight;
-            line-height: @font-swatch6-line-height;
-            background-color: @font-swatch7-background-color;
-            border: none;
-            background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-            background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-        }
-    }
-}
 
 /* ===============================
    SLIDESHOW WIDGET
@@ -850,62 +482,7 @@ MENU
     top:-10px;
 }
 
-/* ===============================
-   PAYPAL BUTTON
-   =============================== */
 
-.widget.paypalbuynow .widget.button.paypal {
-  border: 1px solid @color-swatch3;
-  box-shadow: inset 0 3px 14px rgba(255, 255, 255, 0.5);
-}
-
-
-/* ===============================
-   DROPBOX WIDGET
-   =============================== */
-
-.widget.dropbox .b-wrap .btn {
-  border: 1px solid @color-swatch3;
-  box-shadow: inset 0 3px 14px rgba(255, 255, 255, 0.5);
-}
-
-
-/* ===============================
-   BUTTON CSS
-   =============================== */
-
-
-.widget.button button
-{
-  padding: 8px;
-  border: 1px solid @color-swatch3;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-}
-
-.widget.button button:hover 
-{
-  background: @font-swatch7-background-color-hover;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
-  cursor: pointer;
-}
 
 
 /* ===============================
@@ -1068,166 +645,234 @@ hr.line {
    =============================== */
 
 
+@twitterProfilePicSize: 98px;
+
 .widget.twitter {
+
+  ul.twitter {
+    border-top: 4px solid @color-swatch2;
+      border-bottom: 4px solid @color-swatch2;
+    li {
+      position: relative;
+      min-height: 140px;
+      padding: 20px 0;
+      border-bottom: 1px dashed #DDDDDD;
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+     
+      // footer
+      a, time + span, time {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        font-family: @font-swatch5-font-family;
+        line-height: 1;
+        font-weight: normal;
+        text-decoration: none;
+         color: lighten(@color-swatch3,10%);
+        @media @mobile {
+          font-size: bkscale(@font-swatch5-font-size, 0.6);
+        }
+      }
+      // profile pic
+      .twitter-profile-pic {
+        width: @twitterProfilePicSize;
+        height: @twitterProfilePicSize;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 20px;
+        @media @mobile {
+          width: (@twitterProfilePicSize * 0.55);
+          height: (@twitterProfilePicSize * 0.55);
+        }
+        
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+      .twitter-content {
+        line-height: 1.2em;
+        margin-left: (@twitterProfilePicSize + 20);
+        @media @mobile {
+          margin-left: (@twitterProfilePicSize * 0.55 + 12);
+        }
+        .bk-full-name {
+           color: lighten(@color-swatch3,15%);
+          font-size: bkscale(@font-swatch5-font-size, 1);
+          @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+          }
+        }
+        p {
+          font-family: @font-swatch5-font-family;
+          color: lighten(@color-swatch5,5%);
+          a {
+            font-family: @font-swatch5-font-family;
+            font-size: @font-swatch5-font-size;
+            color: @color-swatch4;
+            line-height: @font-swatch5-line-height;
+          }
+        }
+      }
+    }
+  }
 }
 
-.widget.twitter a {
- color: @color-swatch4;
- font-size:@font-swatch5-font-size;
- text-decoration: none;
+
+/* ===============================
+   CLICK TO CALL
+   =============================== */
+
+
+
+.widget.clicktocall {
+  a, a:hover {
+    padding: 0 1.6em;
+    padding-left: 50px;
+    background-position: 18px center;
+    background-image: image('/images/ic-desktop-call-mob.png');
+    background-repeat: no-repeat;
+    @media @desktop {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      color: @font-swatch5-color;
+      background: transparent;
+      text-shadow: none;
+      letter-spacing: 0;
+      font-size: @font-swatch5-font-size;
+      height: auto;
+      line-height: @font-swatch5-line-height;
+      cursor: default;
+    }
+  }
 }
 
-.widget.twitter a:hover {
-  text-decoration: none;
-}
 
-.widget.twitter ul {
-  padding: 20px 0;
-  margin: 0;
-}
-
-.widget.twitter ul li {
-  border-bottom: none;
-  list-style: none;
-  font-family: @font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
-  color: @font-swatch5-color;
-  padding: 30px 0;
-  border-bottom: 1px dashed #DDDDDD;
-}
-
-.widget.twitter ul li:first-child {
-  border-top: 4px solid @color-swatch2;
-}
-
-.widget.twitter ul li:last-child {
-  border-bottom: 4px solid @color-swatch2;
-  padding-bottom: 30px;
-}
-
-.widget.twitter .twitter-profile-pic {
-  float: left;
-  padding-right: 15px;
-}
-
-.widget.twitter .twitter-content span.bk-full-name {
-  font-family: @font-swatch4-font-family;
-  font-size: @font-swatch5-font-size;
-  color: lighten(@color-swatch3,15%);
-  
-}
-
-.widget.twitter .twitter-content p {
-  padding: 0;
-  color: lighten(@color-swatch5,5%);
-}
-
-.widget.twitter .twitter-content span, .widget.twitter .twitter-content time {
- color: lighten(@color-swatch3,10%);
-}
-
-.widget.twitter .twitter-content span a {
- color: lighten(@color-swatch3,10%);
- text-decoration: underline;
-
-}
-.widget.twitter .twitter-content span a:hover {
-   color: @color-swatch3;
-}
 
 /* ===============================
    CONTACT FORM WIDGET
    =============================== */
 
-.widget.contactform form {
-    display: block;
+.contactform.widget {
+  .form-group {
+    margin-bottom: 1em;
+  }
 }
 
-.widget.contactform fieldset {
-    border: none;
+
+
+
+// ======= Widget: Sign up form
+.widget.signupform {
+ 
+
+  
+  .widget.signupform fieldset {
     padding: 0;
-}
-
-.widget.contactform fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-.widget.contactform fieldset input {
-    height: 40px;
-    width: 100%;
-    border: 4px solid @color-swatch2;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    margin-top: 6px;
-    margin-bottom: 30px;
-    padding: 0;
-}
-
-.widget.contactform fieldset input:focus {
-    outline: none;
-    box-shadow: 0 0 5px #2cbfff;
-}
-
-.widget.contactform fieldset textarea {
-    height: 100px;
-    width: 100%;
-    border: 4px solid @color-swatch2;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    padding-top: 14px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    resize: none;
-    padding: 0;
-}
-
-.widget.contactform fieldset textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px #2cbfff;
-}
-
-.widget.contactform fieldset button.btn {
-    padding: 8px;
+    border: 0;
     margin: 0;
-    border: none;
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    float: right;
-    background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-    background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
+  }
+
+
+  .form-group {
+    // Flex
+    display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+     
+
+      label {
+        // Flex
+      -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+
+      // Layout
+        float: none;
+        width: auto;
+        margin: 0 1em 0 0;
+
+        @media @mobile {
+          display: block;
+          width: 100%;
+        }
+    }
+
+    input.email {
+       -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+    button {
+       -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+  }
 }
   
-.widget.contactform fieldset button.btn:hover {
-  background-color: @font-swatch7-background-color-hover;
-  cursor: pointer;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
-}
 
 
 /* ===============================
@@ -1244,99 +889,10 @@ hr.line {
     padding: 0;
 }
 
-.widget.signupform fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-.widget.signupform fieldset input {
-    width: 68%;
-    float: left;
-    border: 4px solid @color-swatch2;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    margin-bottom: 20px;
-    text-indent: 8px;
-    float:left;
-    padding: 0;
-}
-
-.widget.signupform fieldset input:focus {
-    outline: none;
-    box-shadow: 0 0 5px #2cbfff;
-}
-
-.widget.signupform fieldset button.btn {
-    padding: 7px 10px;
-    text-align: center;
-    margin-top: 6px;
-    margin: 0;
-    border: 1px solid @color-swatch3;
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-    background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-}
-
-.widget.signupform fieldset button.btn:hover {
-    background-color: @font-swatch7-background-color-hover;
-    cursor: pointer;
-    background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
-}
 
 
 
-/* ===============================
-   TWEET THIS WIDGET
-   =============================== */
 
-.widget.tweet {
-   padding: 14px 0; 
-}
-
-.widget.tweet a {
-  padding: 8px 13px 8px 38px;
-  margin: 0;
-  border: none;
-  //background-image: image('/images/twitter.png');
-  background-repeat: no-repeat;
-  background-position: 9px 7px;
-  margin: 2.2em auto;
-  border: 1px solid darken(#2cbfff,10%);
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch7-color;
-  background-color: #2cbfff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.widget.tweet a:hover, .tweet a:active {
-  background-color: darken(#2cbfff,15%);
-}
 
 /* ===============================
    PROFILE WIDGET
@@ -1472,7 +1028,8 @@ footer.bk-footer .widget.profile .twitter span {
 
 .widget.socialicons a {
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
+    overflow: hidden;
     white-space: nowrap;
     height: 32px;
     width: 32px;
@@ -1602,69 +1159,8 @@ footer.bk-footer .widget.profile .twitter span {
     padding: 0;
 }
 
-.widget.profile fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-    margin-bottom: 7px;
-}
 
-.widget.profile fieldset input {
-    height: 41px;
-    width: 100%;
-    float: left;
-    border: none;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    margin-bottom: 15px;
-    text-indent: 8px;
-    float:left;
-    padding: 0;
-}
 
-.widget.profile fieldset input:focus {
-    outline: none;
-    box-shadow: 0 0 5px #2cbfff;
-}
-
-.widget.profile fieldset button.btn {
-    cursor: pointer;
-    padding: 7px 10px;
-    float: left;
-    margin-top: 6px;
-    margin: 0;
-    border: 1px solid @color-swatch3;
-    font-family: @font-swatch7-font-family;
-    font-size: @font-swatch7-font-size;
-    font-weight:@font-swatch7-font-weight;
-    background-color: @font-swatch7-background-color;
-    color: @font-swatch7-color;
-    text-decoration: none;
-    background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-    background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-}
-
-.widget.profile fieldset button.btn:hover {
-    background-color: @font-swatch7-background-color-hover;
-    background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
-}
 
 
 /* ===============================
@@ -1938,70 +1434,6 @@ blockquote {
   margin: 0;
 }
 
-  /* CLICK TO CALL */
-
-.widget.clicktocall {
-  padding: 10px 0;
-}
-
-.widget.clicktocall a {
-  padding: 8px;
-  margin: 2.2em auto;
-  border: 1px solid @color-swatch3;
-  font-family: @font-swatch7-font-family;
-  font-size: @font-swatch7-font-size;
-  font-weight:@font-swatch7-font-weight;
-  background: @font-swatch7-background-color;
-  color: @font-swatch7-color;
-  text-decoration: none;
-  cursor: pointer;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,@color-swatch3)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* IE10+ */
-  background: linear-gradient(to bottom, lighten(@color-swatch3,10%) 0%, @color-swatch3 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='@color-swatch3',GradientType=0 ); /* IE6-9 */
-
-}
-
-.widget.clicktocall a:hover {
-  background: @font-swatch7-background-color-hover;
-  background: -moz-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch3,10%)), color-stop(100%,darken(@color-swatch3,10%))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, lighten(@color-swatch3,10%) 0%, darken(@color-swatch3,10%) 100%); /* Opera 11.10+ */
-  text-decoration: none;
-  }
-
-  .widget.clicktocall a.justifyleft {
-    text-align: left;
-  }
-
-  .widget.clicktocall a.justifycenter {
-    text-align: center;
-  }
-
-  .widget.clicktocall a.justifyright {
-    text-align: right;
-  }
-
-  .widget.clicktocall a.justifyfull {
-    text-align: justify;
-  }
-
-  .widget.clicktocall a.italic { 
-    font-style: italic;
-  }
-
-  .widget.clicktocall a.bold {
-    font-weight: bold;
-  }
-
-  .widget.clicktocall {
-    padding: 20px 0;
-    display:block;
-  }
 
 
   /* SLIDESHOW */
