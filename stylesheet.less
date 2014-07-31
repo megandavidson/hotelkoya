@@ -4,6 +4,13 @@
 
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+// @import "@{templateLocal}/css/common-forms.less";
+// @import "@{templateLocal}/css/widgets-blog.less";
+// @import "@{templateLocal}/css/widgets-ecom.less";
+// @import "@{templateLocal}/css/widgets-menu.less";
+
+@desktop: ~"only screen and (min-width : 769px)";
+
 
 /* ===============================
    TEMPLATE STYLES
@@ -11,8 +18,6 @@
 
 body {
   background-color: @color-swatch1;
-  margin: 0;
-  padding: 0;
 }
 
 .wrapper {
@@ -28,6 +33,9 @@ body {
 
 .main {
   padding: 40px 0;
+  .widget {
+    clear: both;
+  }
 }
 
 /* ===============================
@@ -166,12 +174,6 @@ body {
 
 
 
-
-
-
-
-
-
 header.bk-header {
   padding: 0;
   border-top: 4px solid @color-swatch3;
@@ -192,15 +194,7 @@ header.bk-header {
   text-decoration: none;
 }
 
-.widget.companyname a {
-  font-family:@font-swatch10-font-family;
-  font-weight: @font-swatch10-font-weight;
-  color: @font-swatch10-color;
-  line-height:@font-swatch10-line-height;
-  letter-spacing: @font-swatch10-letter-spacing;
-  font-size: @font-swatch10-font-size;
-  background-color: @color-swatch1;
-}
+
 
 /* LOGO */
 
@@ -211,44 +205,10 @@ header.bk-header {
   min-width: 50px;
   .logo, img {
     line-height: 0;
-
   }
 }
 
 
-.widget.companyheader {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-
-.widget.companyheader:before,
-.widget.companyheader:after {
-  content: " ";
-  display: table;
-}
-
-.widget.companyheader:after {
-  clear: both;
-}
-
-.widget.companyheader {
-  *zoom: 1;
-}
-
-.widget.companyheader .logo img {
-  max-width: 100%;
-  height: auto;
-}
-
-.widget.companyheader .logo-bottom {
-  display: none;
-}
-
-.widget.companyheader .company-name {
-  display: block;
-  margin-top: 6px;
-}
 
 /* ===============================
    FOOTER
@@ -258,114 +218,30 @@ footer.bk-footer {
   padding: 4em 0;
   background-color: @color-swatch2;
   min-height: 150px;
+  h1, h2, h3, h4 {
+    color: @color-swatch5;
+  }
+  p {
+    font-family: @font-swatch5-font-family;
+    color: lighten(@color-swatch5,10%);
+    padding-bottom: 5px;
+  }
+  .widget.content {
+    padding: 0 0 5px;
+  }
 }
 
-footer.bk-footer h1, footer.bk-footer h2, footer.bk-footerh3, footer.bk-footer h4 {
-  color: @color-swatch5;
-}
-
-footer.bk-footer p {
-  font-family: @font-swatch5-font-family;
-  color: lighten(@color-swatch5,10%);
-  padding-bottom: 5px;
-}
-
-footer.bk-footer .widget.content {
-  padding: 0 0 5px;
-}
-
-
-/* ===============================
-   STANDARD NAVIGATION
-   =============================== */
-
-.widget.navigation {
-}
-
-.widget.navigation ul {
-  padding: 0;
-  margin: 0;
-}
-
-.widget.navigation ul.align-center li
-{
-  text-align: center;
-}
-
-.widget.navigation ul.align-left li
-{
-  text-align: left;
-}
-
-.widget.navigation ul.align-right li
-{
-  text-align: right;
-}
-
-.widget.navigation ul li {
-  float: left;
-  display: block;
-  padding-right: 30px;
-}
-
-.widget.navigation ul li a {
-  display: block;
-  font-family:@font-swatch6-font-family;
-  font-size:@font-swatch6-font-size;
-  font-weight: @font-swatch6-font-weight;
-  color: @font-swatch6-color;
-  line-height:@font-swatch6-line-height;
-  letter-spacing: @font-swatch6-letter-spacing;
-}
-
-.widget.navigation ul li a:hover {
-  text-decoration: none;
-  color: @font-swatch6-color-hover;
-}
 
 /* ===============================
    EXTENDED NAVIGATION
    =============================== */
 
-.widget.extendednavigation {
-  float: right;
-  position: relative;
-  background-color: transparent;
-  width: 80%;
-}
-
-.widget.extendednavigation a.pull {
-  display: none;
-}
-
-.widget.extendednavigation ul {
-  padding: 0;
-  margin: 0;
-}
-
-.widget.extendednavigation ul.align-center li
-{
-  text-align: center;
-}
-
-.widget.extendednavigation ul.align-left li
-{
-  text-align: left;
-}
-
-.widget.extendednavigation ul.align-right li
-{
-  text-align: right;
-}
 
 .widget.extendednavigation ul li {
-  float: left;
-  display: block;
   border-bottom: 4px solid @color-swatch2;
   &.selected {
     border-bottom: 4px solid fade(@color-swatch3, 50%);
   }
-
   a {
     padding: 0;
   }
@@ -373,25 +249,11 @@ footer.bk-footer .widget.content {
      padding: 26px 18px 19px;
      display: block;
   }
-
+  &:hover {
+     border-bottom: 4px solid @color-swatch3;
+  }
 }
 
-
-.widget.extendednavigation ul li:hover {
-  border-bottom: 4px solid @color-swatch3;
-}
-
-
-.widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-  display: block;
-  font-family:@font-swatch6-font-family;
-  font-size:@font-swatch6-font-size;
-  font-weight: @font-swatch6-font-weight;
-  color: @font-swatch6-color;
-  line-height:@font-swatch6-line-height;
-  letter-spacing: @font-swatch6-letter-spacing;
-  
-}
 
 .widget.extendednavigation ul li.folder .text:hover {
   color: @font-swatch6-color-hover;
@@ -412,7 +274,6 @@ footer.bk-footer .widget.content {
 }
 
 .widget.extendednavigation ul li.folder {
-  //background-image: image('/images/arrow-down.png');
   background-size: 11px;
   background-position: right center;
   background-repeat: no-repeat;
@@ -443,37 +304,6 @@ footer.bk-footer .widget.content {
 
 
 
-
-
-/* EXTENDED NAVIGATION - INSIDE ZONE */
-
-.main .widget.extendednavigation {
-    max-width: 100%;
-    width: 100%;
-    float: none;
-}
-
-.main .widget.extendednavigation ul {
-  margin: 0;
-}
-
-.main .widget.extendednavigation ul li a, .main .widget.extendednavigation ul li.folder .text {
-  margin-left: 0;
-}
-
-.main .widget.extendednavigation:before,
-.main .widget.extendednavigation:after {
-  content: " ";
-  display: table;
-}
-.main .widget.extendednavigation:after {
-  clear: both;
-}
-.main .widget.extendednavigation {
-  *zoom: 1;
-}
-
-
 /* ===============================
    FEATURE
    =============================== */
@@ -500,24 +330,12 @@ footer.bk-footer .widget.content {
 /* FEATURE TITLE */
 
 .widget.feature h2 {
-  font-family:@font-swatch8-font-family;
-  font-size:@font-swatch8-font-size;
-  font-weight: @font-swatch8-font-weight;
-  line-height:@font-swatch8-line-height;
-  color: @font-swatch8-color;
-  letter-spacing: @font-swatch8-letter-spacing;
   padding: 0 0 3px;
 }
 
 /* FEATURE STRAPLINE */
 
 .widget.feature h3 {
-  font-family:@font-swatch9-font-family;
-  font-size: @font-swatch9-font-size;
-  font-weight: @font-swatch9-font-weight;
-  line-height:@font-swatch9-line-height;
-  color: @font-swatch9-color;
-  letter-spacing: @font-swatch9-letter-spacing;
   padding: 0;
 }
 
@@ -561,84 +379,11 @@ footer.bk-footer .widget.content {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
 }
 
-.widget.feature button.btn.justifyleft
-{
-    text-align: left;
-}
 
-.widget.feature button.btn.justifycenter
-{
-    text-align: center;
-}
 
-.widget.feature button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.feature button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.feature button.btn.italic {
-    font-style: italic;
-}
-
-.widget.feature button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.feature button span {
-    vertical-align: center;
-}
-
-.widget.feature button i {
-    margin-right: 5px;
-}
 
 /* ===============================
-   FEATURE LAYOUTS
-   =============================== */
-
-/* LEFT ALIGN */
-
-.widget.feature.align-left .content {
-  width: 100%;
-  text-align: left;
-}
-
-/* CENTER ALIGN */
-
-.widget.feature.align-center .content {
-  width: 100%;
-  text-align: center;
-}
-
-/* RIGHT ALIGN */
-
-.widget.feature.align-right .content {
-  width: 100%;
-  text-align: right;
-}
-
-/* BUTTON TOP RIGHT */
-
-.widget.feature.btn-top-right .content {
-  width: 100%;
-  text-align: left;
-}
-
-.widget.feature.btn-top-right h2{
-  vertical-align: middle;
-}
-
-.widget.feature.btn-top-right button{
-    vertical-align: middle;
-}
-
-/* ===============================
-   6. MENU
+MENU
    =============================== */
 
 .container {
@@ -1163,44 +908,6 @@ footer.bk-footer .widget.content {
 }
 
 
-/* JUSTIFY */
-
-.widget.button button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.button button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.button button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.button button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.button button.btn.italic {
-    font-style: italic;
-}
-
-.widget.button button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.button span {
-    vertical-align: center;
-}
-
-.widget.button i {
-    margin-right: 5px;
-}
-
 /* ===============================
    CONTENT CSS
    =============================== */
@@ -1278,129 +985,6 @@ footer.bk-footer .widget.content {
     color: @font-swatch5-color;
 }
 
-/* ===============================
-   GALLERY WIDGET
-   =============================== */
-
-.widget.gallery
-{
-}
-
-.widget.gallery ul {
-    display:block;
-    margin: 0;
-    padding:0px;
-    list-style: none;
-}
-
-.widget.gallery li {
-    float: left;
-    position: relative;
-    width: 33.3%;
-    padding-bottom: 33%;
-    list-style-type: none;
-}
-
-.widget.gallery li  span.inner {
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-color: @color-swatch1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.widget.gallery ul li.one-to-one span.inner
-{
-    background-size:100% 100%;
-}
-
-.widget.gallery ul li.portrait span.inner
-{
-    background-size:100% auto;
-}
-
-.widget.gallery ul li.landscape span.inner
-{
-    background-size:auto 100%;
-}
-
-.widget.gallery li span.inner {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    top: 0px;
-    bottom: 16px;
-    overflow: hidden;
-}
-
-.widget.gallery li span.inner img {
-    display:none;
-}
-
-.widget.gallery ul:before,
-.widget.gallery ul:after {
-  content: " ";
-  display: table;
-}
-.widget.gallery ul:after {
-  clear: both;
-}
-.widget.gallery ul {
-  *zoom: 1;
-}
-
-.widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: -310px;
-    max-height: 284px;
-    background:@color-swatch2;
-    padding: 10px;
-    text-align: center;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-.widget.gallery li span.inner:hover .title {
-   margin-bottom: 0;
-}
-
-.widget.gallery li span.inner .description {
-  display: none;
-}
-
-.widget.gallery li span.inner a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/* Lightbox */
-
-.lb-data .lb-caption, .lb-data .lb-number {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:lighten(@font-swatch5-color,50%);
-}
-
-.lb-data .lb-number {
-  font-size:bkscale(@font-swatch5-font-size,0.9);
-}
 
 /* ===============================
    DIVIDER WIDGET
@@ -1417,68 +1001,7 @@ hr.line {
    border: none;
 }
 
-hr.line.align-left {
-   margin: 20px auto 20px 0px;
-}
 
-hr.line.align-center {
-   margin: 20px auto;
-}
-
-hr.line.align-right {
-   margin: 20px 0px 20px auto;
-}
-
-
-/* ===============================
-   CLICK TO CALL WIDGET
-   =============================== */
-
-.widget.clicktocall {
-  padding: 10px 0;
-}
-
-.widget.clicktocall a {
-  margin: 2.2em auto;
-  font-family: @font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  color: darken(@font-swatch5-color,20%);
-  text-decoration: none;
-  cursor: default;
-}
-
-.widget.clicktocall a:hover {
- text-decoration: none;
-}
-
-.widget.clicktocall a.justifyleft
-{
-    text-align: left;
-}
-
-.widget.clicktocall a.justifycenter
-{
-    text-align: center;
-}
-
-.widget.clicktocall a.justifyright
-{
-    text-align: right;
-}
-
-.widget.clicktocall a.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.clicktocall a.italic {
-    font-style: italic;
-}
-
-.widget.clicktocall a.bold {
-    font-weight: bold;
-}
 
 /* ===============================
    REDIRECT WIDGET
@@ -1677,34 +1200,6 @@ hr.line.align-right {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
 }
 
-.widget.contactform fieldset button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.contactform fieldset button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.contactform fieldset button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.contactform fieldset button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.contactform fieldset button.btn.italic {
-    font-style: italic;
-}
-
-.widget.contactform fieldset button.btn.bold {
-    font-weight: bold;
-}
-
 
 /* ===============================
    SIGNUPFORM WIDGET
@@ -1782,25 +1277,6 @@ hr.line.align-right {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten(@color-swatch3,10%)', endColorstr='darken(@color-swatch3,10%)',GradientType=0 ); /* IE6-9 */
 }
 
-/* ===============================
-   LINKED IN
-   =============================== */
-
-.container-outer .li-profile-container {
-  padding: 0;
-  margin: 0;
-
-}
-
-.no-profile {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-
-}
 
 
 /* ===============================
@@ -1932,8 +1408,9 @@ footer.bk-footer .widget.profile .twitter span {
 
 .widget.profile .bk-profile-socialicons a {
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
     white-space: nowrap;
+    overflow: hidden;
     height: 32px;
     width: 32px;
 }
@@ -1983,6 +1460,8 @@ footer.bk-footer .widget.profile .twitter span {
     background-position: center;
     margin-bottom: 6px;
     background-size: 18px;
+    overflow: hidden;
+    text-indent: 999px;
 }
 
 /* SVG ICONS */
