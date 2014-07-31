@@ -987,6 +987,35 @@ MENU
 
 
 /* ===============================
+   GALLERY WIDGET
+   =============================== */
+
+.widget.gallery{
+  .image-data {
+    border-bottom: 4px solid @color-swatch3;
+    display: block;
+    position: absolute;
+    top: 100%;
+    -webkit-transition: top 0.2s ease;
+    -moz-transition: top 0.2s ease;
+    -o-transition: top 0.2s ease;
+    transition: top 0.2s ease;
+
+  }
+  .inner:hover .image-data {
+    top: 0;
+  }
+  .inner {
+    background-color: @color-swatch1;
+    .title, .description {
+      color: @color-swatch4;
+
+    }
+  }
+}
+
+
+/* ===============================
    DIVIDER WIDGET
    =============================== */
 
@@ -1825,10 +1854,7 @@ footer.bk-footer .widget.profile .twitter span {
       padding-bottom: 50%;
   }
 
-  .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-      font-size:bkscale(@font-swatch5-font-size,0.9);
-      line-height:bkscale(@font-swatch5-line-height,0.9);
-  }
+  
 
      /* Slideshow */
   .widget.responsiveslideshow .slideshow-image-list {
@@ -1990,11 +2016,7 @@ blockquote {
 
  /* GALLERY */
 
-  .widget.gallery li span.inner .title, .widget.gallery li span.inner .description {
-    max-height: 150px;
-    font-size:bkscale(@font-swatch5-font-size,0.8);
-    line-height:bkscale(@font-swatch5-line-height,0.8);
-  }
+ 
 
   .widget.gallery p {
     padding: 10px;
