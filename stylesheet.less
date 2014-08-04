@@ -1,15 +1,19 @@
 /* ===============================
    IMPORT CSS
    =============================== */
-
+   
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 @import "@{templateLocal}/css/common-forms.less";
+@import "@{templateLocal}/css/common-text.less";
 @import "@{templateLocal}/css/widgets-blog.less";
-@import "@{templateLocal}/css/widgets-ecom.less";
 @import "@{templateLocal}/css/widgets-menu.less";
+@import "@{templateLocal}/css/widgets-ecom.less";
 
+// Larget than tablet
 @desktop: ~"only screen and (min-width : 769px)";
+// Larger than mobile
+@mobile-up: ~"only screen and (min-width : 480px)";
 
 
 /* ===============================
@@ -22,7 +26,7 @@ body {
 
 .wrapper {
     width: 90%;
-    margin: 0 5%;
+    margin: 0 auto;
 }
 
 
@@ -383,106 +387,6 @@ footer.bk-footer {
 
 
 
-/* ===============================
-   SLIDESHOW WIDGET
-   =============================== */
-
-.widget.responsiveslideshow {
-    .slideshow-image-list,
-    .slideshow-widget {
-        min-height: 450px;
-        @media @tablet {
-            min-height: 350px;
-        }
-        @media @mobile {
-            min-height: 280px;
-            height: 280px;
-        }
-    }
-    .title {
-        display: block;
-    }
-    .content-wrapper {
-        background: rgba(0,0,0,0.5);
-    }
-    .slideshow-widget {
-        /* Arrows */
-        .btn-prev,
-        .btn-next {
-            font-size: 0;
-            z-index: 11;
-            text-indent: -99999px;
-            width: 40px;
-            height: 40px;
-            background: rgba(0,0,0,0.5);
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-        }
-        .btn-prev {
-            &:after {
-                content: "\2190";
-                color: #fff;
-                top: 5px;
-            }
-        }
-        .btn-next {
-            &:after {
-                content: "\2192";
-                color: #fff;
-                top: 5px;
-            }
-        }
-        /* Play Button */
-        .btn-play {
-            background: rgba(0,0,0,0.5);
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
-            &:after {
-                color: #fff;
-                letter-spacing: -4px;
-                top: -2px;
-            }
-        }
-    }
-    /* Slideshow Controls */
-    .slideshow-widget-controls {
-        .dot {
-            width: 11px;
-            height: 11px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-            &.selected {
-                background-color: @color-swatch5;
-            }
-        }
-    }
-}
-
-.widget.responsiveslideshow .btn-play:after {
-    font-size:20px;
-}
-
-.widget.responsiveslideshow .slideshow-widget .btn-play {
-    background: rgba(0,0,0,0.5);
-    font-size: 0;
-    text-indent: -99999px;
-    position: absolute;
-    cursor: pointer;
-    z-index: 12;
-    width: 11%;
-    height: 42px;
-    top: 43%;
-    left: 45%;
-}
-
-.widget.responsiveslideshow .slideshow-widget .btn-play:after {
-    top:-10px;
-}
-
-
 
 
 /* ===============================
@@ -586,10 +490,185 @@ footer.bk-footer {
     background-color: @color-swatch1;
     .title, .description {
       color: @color-swatch4;
-
+    }
+    .title {
+      color: @color-swatch3;
+      font-weight: 800;
     }
   }
 }
+
+
+
+
+/* ===============================
+   RESPONSIVE SLIDESHOW WIDGET
+   =============================== */
+
+
+.widget.responsiveslideshow {
+  .slideshow-image-list {
+    margin: 0 0;
+  }
+  .slideshow-widget-controls {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-top: 0;
+    -webkit-user-select: none;  
+    -moz-user-select: none;     
+    -ms-user-select: none; 
+    @media @mobile {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  // Dot
+  .slideshow-widget-controls .dot {
+    &:not(.selected) {
+      cursor: pointer;
+    }
+    border-radius: 50%;
+    margin: 0 6px;
+    background: @color-swatch1;
+    border: 4px solid @color-swatch3;
+    &.selected {
+      background: @color-swatch3;
+      border: 4px solid @color-swatch3;
+    }
+    &:hover:not(.selected) {
+      border: 2px solid @color-swatch3;
+    }
+    @media @mobile {
+      width: 8px;
+      height: 8px;
+      border: 2px solid @color-swatch3;
+    }
+  }
+  .slideshow-widget {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;
+
+    // Buttons prev/next
+    .btn-next, .btn-prev {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      text-indent: 110%;
+      white-space: nowrap;
+      // Intentionally§ not using a color swatch
+      background-color:  #fff;
+      @media @mobile {
+        width: 35px;
+        height: 35px;
+      }
+      
+      &:after {
+        display: block;
+        content: "";
+        width: 34px;
+        height: 34px;
+        text-align: center;
+        position: absolute;
+        color: #000;
+        background-image: image('/images/ui-slide-arrows.png');
+        background-color: @color-swatch3;
+        position: absolute;
+        top: 50%;
+        margin: -17px 0 0 -17px;
+      }
+      &:hover:after {
+        background-color: darken(@color-swatch2, 10%);
+      }
+    }
+
+    .btn-next {
+      right: 0;
+      &:after {
+        background-position: right 0;
+        left: 52%;
+      }
+    }
+
+    .btn-prev {
+      left: 0;
+      &:after {
+        left: 48%;
+      }
+    }
+
+
+    // Button play
+    .btn-play {
+      background-color:  @color-swatch3;
+      color: @color-swatch1;
+      min-width: 30px;
+      top: 0;
+      left: 0;
+      width: 60px;
+     
+      @media @mobile {
+        width: 35px;
+        height: 35px;
+      }
+      &:after {
+        font-size: 16px;
+        @media @tablet {
+          font-size: 20px;
+          line-height: 35px;
+        }
+      }
+      &:hover {
+        background-color: darken(@color-swatch2, 10%);
+      }
+    }
+  }
+  .content-wrapper {
+    // (Appears even without content)
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top:auto;
+    background-color: fade(@color-swatch1, 90%); 
+    .title, .description {
+      display: inline-block;
+      float: left;
+      padding: 3px 16px;
+      color: @color-swatch5;
+    }
+    .title {
+      font-weight: bold;
+      color: @color-swatch3;
+      font-family: @font-swatch8-font-family;
+      font-size: bkscale(@font-swatch5-font-size, 1.2);
+      line-height: bkscale(@font-swatch5-line-height, 1.2);
+    
+      @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+      }
+    }
+    .description {
+      
+      clear: both;
+     
+      font-size: bkscale(@font-swatch5-font-size, 1);
+      line-height: bkscale(@font-swatch5-line-height, 1);
+      
+      @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+      }
+    }
+
+    .title + .description {
+      padding-top: 0;
+      margin-top: -0.5em;
+    }
+  }
+}
+
 
 
 /* ===============================
@@ -736,7 +815,7 @@ hr.line {
     background-position: 18px center;
     background-image: image('/images/ic-desktop-call-mob.png');
     background-repeat: no-repeat;
-    @media @desktop {
+    @media @mobile-up {
       padding: 0;
       border: none;
       box-shadow: none;
@@ -1348,20 +1427,10 @@ footer.bk-footer .widget.profile .twitter span {
   }
 
 
-   /* Gallery */
-
- .widget.gallery ul.gallery-widget li
-  {
-      width: 50%;
-      padding-bottom: 50%;
-  }
 
   
 
-     /* Slideshow */
-  .widget.responsiveslideshow .slideshow-image-list {
-      height: 400px;
-  }
+
   .widget .extendednavigation ul.align-right li.folder:after {
     left: 5px;
     right: inherit;
@@ -1370,23 +1439,9 @@ footer.bk-footer .widget.profile .twitter span {
 
 }
 
-@media only screen and (max-width : 650px) and (min-width : 481px) {
-  
-   /* Tablet view: 2 tiles */
-   .widget.gallery li {
-      width: 50%;
-      padding-bottom: 50%;
-   }
-}
 
-@media only screen and (max-width : 1050px) and (min-width : 651px) {
-   /* Small desktop / ipad view: 3 tiles */
-   .widget.gallery li {
-      width: 33.3%;
-      padding-bottom: 33.3%;
-   }
 
-}
+
 
 /* ===============================
    IPHONE WIDTH
@@ -1441,36 +1496,7 @@ blockquote {
 }
 
 
-
-  /* SLIDESHOW */
-  .widget.responsiveslideshow .description {
-    display:none;
-  }
-
-  .widget.responsiveslideshow .slideshow-image-list {
-      height: 200px;
-  }
-
-
- /* GALLERY */
-
  
-
-  .widget.gallery p {
-    padding: 10px;
-  }
-
-  .widget.gallery ul.gallery-widget li {
-    width: 50%;
-    padding-bottom: 50%;
-  }
-
-
-  /* Smartphone view: 1 tile */
-  .widget.gallery li {
-      width: 100%;
-      padding-bottom: 100%;
-  }
 }
 
 @media only screen and (min-width: 1140px) {
