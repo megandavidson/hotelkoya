@@ -325,22 +325,29 @@ footer.bk-footer {
 }
 
 .widget.feature .spare {
-    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    padding: 30px;
     width: 30%;
+}
+
+.widget.feature h2,
+.widget.feature h3,
+.feature-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px 30px;
+}
+
+.widget.feature h2 + h3, .widget.feature h2 + .feature-btn, .widget.feature h3 + .feature-btn {
+  padding-top: 0;
 }
 
 /* FEATURE TITLE */
 
 .widget.feature h2 {
-  padding: 0 0 3px;
 }
 
 /* FEATURE STRAPLINE */
 
 .widget.feature h3 {
-  padding: 0;
 }
 
 /* FEATURE BUTTON */
@@ -849,15 +856,11 @@ hr.line {
 
 // ======= Widget: Sign up form
 .widget.signupform {
- 
-
-  
   .widget.signupform fieldset {
     padding: 0;
     border: 0;
     margin: 0;
   }
-
 
   .form-group {
     // Flex
@@ -889,8 +892,6 @@ hr.line {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-
-     
 
       label {
         // Flex
