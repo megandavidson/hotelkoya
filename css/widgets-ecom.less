@@ -26,6 +26,8 @@
 		position: relative;
 		margin-top: 47px;
 
+
+
 		@media @mobile {
 			padding: 20px;
 		}
@@ -44,11 +46,18 @@
 			border-width: 0 20.5px 27px 20.5px;
 			border-color: transparent transparent @color-swatch2 transparent;
 		}
+
+
 	}
 
 	// Open basket
 	.ecombasket-list-container {
 		.clearfix;
+
+		p {
+			padding: 0;
+		}
+
 		ul {
 			li {
 				position: relative;
@@ -98,6 +107,7 @@
 					.ecombasket-remove-button {
 						background-color: @color-swatch3;
 						color: @color-swatch1;
+						border: none;
 						display: inline-block;
 						font-size: bkscale(@font-swatch5-font-size, 0.8);
 						text-decoration: none;
@@ -128,7 +138,7 @@
 				}
 			}
 		}
-		.ecombasket-checkout-wrap {
+		.ecombasket-summary-wrap {
 			float: right;
 			margin: 0;
 			@media only screen and (max-width : 460px) {
@@ -872,6 +882,9 @@
 					padding-left: 0;
 					border-right: none;
 				}
+				p {
+					padding: 0;
+				}
 				// Name
 				.basket-summary-productname {
 					font-size: @font-swatch4-font-size;
@@ -886,6 +899,7 @@
 				// Price
 				.basket-summary-pricepu {
 					font-size: @font-swatch4-font-size;
+					padding: 0;
 					@media @mobile {
 						font-size: bkscale(@font-swatch4-font-size, 0.8);
 					}
@@ -896,8 +910,7 @@
 					position: absolute;
 					right: 20px;
 					display: block;
-					top: 20px;
-					height: 30px;
+					top: 10px;
 					line-height: 30px;
 					text-align: center;
 					font-size: bkscale(@font-swatch5-font-size, 0.8);
@@ -912,10 +925,8 @@
 				.basket-summary-quantitybtn {
 					background-color: transparent;
 					margin: 0;
-					position: absolute;
+					position: relative;
 					width: 150px;
-					right: 20px;
-					top: 50px;
 					height: 40px;
 					@media @bp-checkout-compact {
 						position: relative;
