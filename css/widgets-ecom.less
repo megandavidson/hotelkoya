@@ -944,9 +944,8 @@
 						border: none;
 						cursor: pointer;
 						padding: 0;
-						color: @color-swatch1;
-						background-color: @color-swatch3;
 						position: absolute;
+						box-shadow: none;
 						top: 0;
 						width: 40px;
 						height: 40px;
@@ -958,16 +957,11 @@
 							line-height: 30px;
 						}
 
-						&:hover {
-							background-color: darken(@color-swatch2, 10%);
-						}
 
 						&.js-remove {
-							border-radius: 50px 0 0 50px;
 							left: 0;
 						}
 						&.js-add {
-							border-radius: 0 50px 50px 0;
 							right: 0;
 						}
 					}
