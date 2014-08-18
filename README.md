@@ -3,6 +3,10 @@ hotelkoya
 
 BaseKit's Hotel Koya Template
 
+Changes - 2014-08-12
++ Added padding-bottom to Blog Search
++ Added Darken to featured products price background
+
 Changes - 2013-05-22
 + Onto Develop Branch
 
