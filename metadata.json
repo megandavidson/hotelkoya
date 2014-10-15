@@ -4,7 +4,7 @@
 	"screenshot":"hotelkoya.png",
 	"templateType":"standard",
     "pageTypes": ["home"],
-    "widgetVersion": 992,
+    "widgetVersion": 1,
     "tags": {
     "en": ["colorful", "bright", "hotel", "holiday", "modern", "colourful", "travel", "hospitality", "turism", "clean", "simple", "sans-serif"],
     "es": ["colorido", "claro", "hotel", "vacaciones", "moderno", "viaje", "hosteleria", "turismo", "limpio", "simple", "sans-serif"],
